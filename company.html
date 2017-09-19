@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>信息页面</title>
+		<link rel="icon" href="img/logo_head.jpg" />
+		<link rel="stylesheet" href="css/header2.css" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/company.css" />
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+		<script src="js/echarts.min.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+		<script>
+			$(function(){
+				if(window.ActiveXObject || "ActiveXObject" in window){
+					$("#select").css({'position':'none',})
+				}else{				
+					$("#select").css({'position':'absolute',})
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div class="header clearfix">
+      <!--logo-->
+      <div class="logo l">
+        <a href="javascript:;"><img src="img/logomin.png" alt="" ></a>
+      </div>
+      <!--nav-->
+      <div class="nav l">
+		<ul class="clearfix">
+	          <li><a href="index2.html">首页</a></li>	            	          
+	          <li class="nav_choose"><a href="javascript:;">矿企</a></li>	           	          
+	          <li class=""> <a href="javascript:;">集团</a></li>	          	          
+	          <li> <a href="javascript:;">银行</a></li>	           	          
+        </ul>
+      </div>
+      <div class="r header-operate-container">
+          <!--search-->
+         <div class="search">
+				<form action="" method="get">
+					<div class="doub">
+					    <div id="content">
+					        <div class="first">
+					        	<div class="selectBox">
+					        		<select name="" id="select">
+										<option value="银行">银行</option>
+										<option value="公司">公司</option>
+										<option value="集团">集团</option>
+									</select>
+									<span class="tra"></span>
+									</div>
+					        	<input id="kw" onKeyup="getContent(this);" placeholder="请输入需查找的内容" />
+					        </div>
+					    </div>
+						<input type="button" value="搜索"  class="ipt2"/>
+					
+					</div>
+				</form>
+			<div id="append"></div>				
+			</div>	
+				<div class="regist">
+           			 <a href="login.html">登录</a>
+				</div>
+      </div>
+    </div>
+    <div class="main-container">
+
+	<!-- 主要内容 -->
+	<div class="bg-appDetailTop">
+		<div class="appDetail-container draw clearfix">
+			<div class="ranking-title l">
+				<i class="apply-rank"><img src="http://jic2.talkingdata.com/observatory/mi/images/icon-publicRank.png"> </i>贵州吉顺矿业有限公司
+			</div>
+	</div>
+	<div class="mainDatas-container clearfix">
+
+		<div class="data-content app-rank clearfix">
+			<!--分类列表-->
+			<div class="app-menu">
+				<ul class="menu-en ps-container">
+					<li class="trans active title"><span td-data="0">工商信息</span></li>
+					<li class="trans one"><span td-data="1">股东信息</span></li>
+					<li class="trans"><span td-data="9">主要人员</span></li>
+					<li class="trans"><span td-data="208">变更记录</span></li> 
+					<li class="trans"><span td-data="208">下属煤矿</span></li> 
+					<div class="ps-scrollbar-x" style="left: 0px; bottom: 3px; width: 0px;"></div>
+				</ul>				
+			</div>			
+			<div class="appRank-container coverage-rank">
+				<div class="weibo-ranking">
+					<div class="lists-container">
+						<div class="ranking-list-container">
+							<div class="weibo-ranking-contents">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab-weiboRanking table" id="mytable" style="display: none;">
+									<thead>
+									<tr id="bar_head">
+										<th scope="col" width="50px">序号</th>										
+										<th scope="col" width="400px" style="text-align: center;">企业名称</th>
+										<th scope="col" width="150px" style="text-align: center;">煤矿状态</th>
+										<th scope="col" width="400px" style="text-align: center;">备注</th>
+									</tr>
+									</thead>
+									<tbody>	
+										 <tr class="s3">                                                          
+									 		<td width="50px">0</td>
+									 		<td width="400px">
+			                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh81">
+			                                        <a href="javascript:;" onclick="aa(&#39;qyh81&#39;)" id="81">贵州新西南矿业股份有限公司毕节市七星关区杨家湾煤矿</a>
+			                                        <input name="qyh" type="hidden" value="81">
+			                                    </form>
+			                                </td>                                                               
+			                                         <td width="150px"><a class="btn-success">开启</a></td>
+			                                                                   
+									 		<td width="400px"></td>
+									 	</tr>
+									 	<tr class="s1">
+                                 
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh83">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh83&#39;)" id="83">贵州新西南矿业股份有限公司毕节市亮岩镇大树煤矿</a>
+                                        <input name="qyh" type="hidden" value="83">
+                                    </form>
+                                </td>
+                                
+                                    <td width="150px"><a class="btn btn-danger">关闭</a></td>
+                                
+
+
+						 		<td width="400px"></td>
+						 	</tr>
+                         
+                             
+						 	<tr class="s1">
+                                 
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh84">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh84&#39;)" id="84">贵州新西南矿业股份有限公司毕节市七星关区长春堡镇金桥煤矿</a>
+                                        <input name="qyh" type="hidden" value="84">
+                                    </form>
+                                </td>
+                                
+                                    <td width="150px"><a class="btn btn-danger">关闭</a></td>
+                                
+
+
+						 		<td width="400px"></td>
+						 	</tr>
+                         
+                             
+                             
+						 	<tr class="s1">
+                                 
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh88">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh88&#39;)" id="88">贵州毕节市大吉煤矿</a>
+                                        <input name="qyh" type="hidden" value="88">
+                                    </form>
+                                </td>
+                                
+                                    <td width="150px"><a class="btn btn-danger">关闭</a></td>
+                                
+
+
+						 		<td width="400px"></td>
+						 	</tr>
+                         
+                             
+                                 
+                                     <tr class="s3">
+                                 
+                            
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh91">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh91&#39;)" id="91">贵州黔宜能源集团有限公司七星关区燕子口镇宝黔煤矿</a>
+                                        <input name="qyh" type="hidden" value="91">
+                                    </form>
+                                </td>
+                                
+                                     
+                                         <td width="150px"><a class="btn btn-success">开启</a></td>
+                                     
+                                
+
+
+						 		<td width="400px"></td>
+						 	</tr>
+                         
+                             
+                                 
+                                     <tr class="s3">
+                                 
+                            
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh95">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh95&#39;)" id="95">贵州含垣矿业有限公司毕节市永生煤矿</a>
+                                        <input name="qyh" type="hidden" value="95">
+                                    </form>
+                                </td>
+                                
+                                     
+                                         <td width="150px"><a class="btn btn-success">开启</a></td>
+                                     
+                                
+
+
+						 		<td width="400px"></td>
+						 	</tr>
+                         
+                             
+                                 
+                                     <tr class="s3">
+                                 
+                            
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh100">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh100&#39;)" id="100">贵州新西南矿业股份有限公司兴仁县下山镇荣阳煤矿</a>
+                                        <input name="qyh" type="hidden" value="100">
+                                    </form>
+                                </td>
+                                
+                                     
+                                         <td width="150px"><a class="btn btn-success">开启</a></td>
+                                     
+                                
+
+
+						 		<td width="400px"></td>
+						 	</tr>
+                         
+                             
+                                 
+                                     <tr class="s3">
+                                 
+                            
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh103">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh103&#39;)" id="103">贵州华瑞鼎兴能源有限公司水城县阿戛乡陈家沟煤矿</a>
+                                        <input name="qyh" type="hidden" value="103">
+                                    </form>
+                                </td>
+                                
+                                     
+                                         <td width="150px"><a class="btn btn-success">开启</a></td>
+                                     
+                                
+
+
+						 		<td width="400px"></td>
+						 	</tr>
+                         
+                             
+                                 
+                                     <tr class="s3">
+                                 
+                            
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh105">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh105&#39;)" id="105">贵州华瑞鼎兴能源有限公司六盘水市水城县阿戛乡阿戛煤矿</a>
+                                        <input name="qyh" type="hidden" value="105">
+                                    </form>
+                                </td>
+                                
+                                     
+                                         <td width="150px"><a class="btn btn-success">开启</a></td>
+                                     
+                                
+
+
+						 		<td width="400px"></td>
+						 	</tr>                                                                                    
+                                     <tr class="s3">                                                           
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh106">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh106&#39;)" id="106">贵州华瑞鼎兴能源有限公司水城县大田煤矿</a>
+                                        <input name="qyh" type="hidden" value="106">
+                                    </form>
+                                </td>                                                                    
+                                         <td width="150px"><a class="btn btn-success">开启</a></td>                                                                   
+						 		<td width="400px"></td>
+						 	</tr>                                                                                     
+                                     <tr class="s2">                                                                
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh115">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh115&#39;)" id="115">贵州美升能源集团有限公司水城县阿佐煤矿</a>
+                                        <input name="qyh" type="hidden" value="115">
+                                    </form>
+                               </td>                                                                    
+                                         <td width="150px"><a class="btn btn-warning">技改</a></td>                                                                   
+						 		<td width="400px">15t/a的生产矿井，有30t/a的采矿证</td>
+						 	</tr>                                                                                     
+                                     <tr class="s2">                                                               
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh116">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh116&#39;)" id="116">贵州美升能源集团有限公司六枝特区新兴煤矿</a>
+                                        <input name="qyh" type="hidden" value="116">
+                                    </form>
+                                </td>                                                                   
+                                        <td width="150px"><a class="btn btn-warning">技改</a></td>
+                                                                 
+						 				<td width="400px">技改、扩界扩能</td>
+						 	</tr>
+						 	 <tr class="s3">                                                            
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh119">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh119&#39;)" id="119">贵州丰联矿业有限公司六枝特区六龙煤矿</a>
+                                        <input name="qyh" type="hidden" value="119">
+                                    </form>
+                                </td>                                                                   
+                                         <td width="150px"><a class="btn btn-success">开启</a></td>                                                                    
+						 		<td width="400px"></td>
+						 	</tr>                                                                                     
+                                     <tr class="s2">                                                               
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh124">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh124&#39;)" id="124">贵州吉龙投资有限公司盘县洒基镇长箐煤矿</a>
+                                        <input name="qyh" type="hidden" value="124">
+                                    </form>
+                                </td>                                                                 
+                                         <td width="150px"><a class="btn btn-warning">技改</a></td>                                                                   
+						 		<td width="400px">技改、扩界扩能</td>
+						 	</tr>                                                                                    
+                                     <tr class="s2">                                                               
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh126">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh126&#39;)" id="126">贵州吉龙投资有限公司盘县洒基镇荣祥矿井</a>
+                                        <input name="qyh" type="hidden" value="126">
+                                    </form>
+                                </td>                                                                   
+                                         <td width="150px"><a class="btn btn-warning">技改</a></td>                                                                    
+						 		<td width="400px">技改、扩界扩能</td>
+						 	</tr>                                                                                    
+                                     <tr class="s2">                                                                
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh127">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh127&#39;)" id="127">贵州吉龙投资有限公司盘县松河乡松林煤矿</a>
+                                        <input name="qyh" type="hidden" value="127">
+                                    </form>
+                                </td>
+                                
+                                     
+                                         <td width="150px"><a class="btn btn-warning">技改</a></td>
+                                     
+                                
+
+
+						 		<td width="400px">技改、扩界扩能</td>
+						 	</tr>
+                         
+                             
+                                 
+                                     <tr class="s2">
+                                     
+                            
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh128">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh128&#39;)" id="128">贵州博鑫矿业股份有限公司盘县洒基镇二排煤矿</a>
+                                        <input name="qyh" type="hidden" value="128">
+                                    </form>
+                                </td>
+                                
+                                     
+                                         <td width="150px"><a class="btn btn-warning">技改</a></td>
+                                     
+                                
+
+
+						 		<td width="400px">技改、扩界扩能</td>
+						 	</tr>
+                         
+                             
+                                 
+                                     <tr class="s2">
+                                     
+                            
+						 		<td width="50px">0</td>
+						 		<td width="400px">
+                                    <form method="get" action="http://192.168.31.194:8000/get_info/" id="qyh129">
+                                        <a href="javascript:;" onclick="aa(&#39;qyh129&#39;)" id="129">贵州吉龙投资有限公司盘县洒基镇五排煤矿</a>
+                                        <input name="qyh" type="hidden" value="129">
+                                    </form>
+                                </td>
+                                
+                                     
+                                         <td width="150px"><a class="btn btn-warning">技改</a></td>
+                                     
+                                
+
+
+						 		<td width="400px">技改、扩界扩能</td>
+						 	</tr>
+                         
+									</tbody>
+								</table>
+							<!--工商信息-->
+							<div class="Business-information">
+								<table class="m_changeList"> 
+								<tbody>
+									<tr> 
+										<td class="ma_bluebg ma_left" width="18%">统一社会信用代码：</td> 
+										<td class="ma_left">91520000573314031R</td>                                                           
+                            			<td class="ma_bluebg ma_left">纳税人识别号：</td> 
+                           				 <td class="ma_left"> 91520000573314031R </td>                                                     
+									</tr> 
+									<tr> 
+										<td class="ma_bluebg ma_left" width="15%">注册号：</td> 
+										<td class="ma_left">520000000058388 </td>                                                          
+                            			<td class="ma_bluebg ma_left">组织机构代码：</td> 
+                            			<td class="ma_left">57331403-1 </td>                                                         
+									</tr> 
+									<tr>
+										<td class="ma_bluebg ma_left"> 法定代表人： </td>                                       
+                    					<td class="ma_left">杨凯</td> 
+                    					<td class="ma_bluebg ma_left">注册资本：</td>
+                    					<td class="ma_left">20000 万人民币元  </td>                                                      
+									</tr>
+									<tr>
+										<td class="ma_bluebg ma_left">经营状态：</td> 
+										<td class="ma_left"> 存续 </td>
+                      
+					                    <td class="ma_bluebg ma_left">成立日期：</td>
+					                    <td class="ma_left">2011-04-28</td>                       
+                    				 </tr> 
+                    				 <tr> 
+				                     	<td class="ma_bluebg ma_left">公司类型：</td> 
+				                     	<td class="ma_left">有限责任公司(自然人投资或控股)</td>                                
+			                            <td class="ma_bluebg ma_left">人员规模：</td> 
+			                            <td class="ma_left">  -   </td> 
+			               			</tr>
+					                <tr>
+					                 	<td class="ma_bluebg ma_left">营业期限：</td> 
+					                 	<td class="ma_left">2011-04-28 至 无固定期限</td>              
+							            <td class="ma_bluebg ma_left">登记机关：</td>
+							            <td class="ma_left" style="max-width:301px;">贵州省工商行政管理局</td>                              
+		                            </tr> 
+                             		<tr>
+		                             	<td class="ma_bluebg ma_left">核准日期：</td> 
+		                             	<td class="ma_left"> 2016-07-28</td>                                
+			                            <td class="ma_bluebg ma_left">英文名：</td> 
+			                            <td class="ma_left" style="max-width:301px;"> - </td>                         
+                            		</tr>
+		                             <tr> 
+		                             	<td class="ma_bluebg ma_left">   所属地区</td>                      
+							            <td class="ma_left">贵州省</td>                             
+							            <td class="ma_bluebg ma_left">所属行业</td>                           
+							            <td class="ma_left"> 批发和零售业</td>                   
+		                            </tr>
+		                            <tr>
+		                             	<td class="ma_bluebg ma_left">企业地址：</td> 
+		                             	<td class="ma_left" colspan="3">贵州省毕节市金沙县城关镇长安路235号                           
+						                </td>
+		                            </tr> 
+		                            <tr>
+		                            	<td class="ma_bluebg ma_left">经营范围：</td> 
+		                            	<td class="ma_left" colspan="3">
+						                                法律、法规、国务院决定规定禁止的不得经营；法律、法规、国务院决定规定应当许可（审批）的，经审批机关批准后凭许可（审批）文件经营;法律、法规、国务院决定规定无需许可（审批）的，市场主体自主选择经营。(矿产品（除专项）销售；矿业投资、矿业策划与咨询服务；矿山机械设备、建材、钢材销售；科技产业投资开发、非金融性项目投资开发；煤炭的开采及销售（限取得许可证的分支机构经营）；瓦斯各项参数测定；煤质各项指标化验。)
+			                            </td>
+		               				</tr> 
+								</tbody>
+							</table>
+							</div>
+							<!--股东信息-->
+								<div class="Shareholder-Information" style="display: none;">
+									<div id="main" style="width: 1050px;height:700px;"></div>
+								</div>																	
+							<!--主要人员-->
+							<div class="main-people" style="display: none;">
+								<table class="z_changeList" > 
+									<tbody>
+										<tr> 
+											<th class="c_thblue_bg" style="text-align: center;"> 姓名</th> 
+											<th class="c_thblue_bg" style="text-align:center">职务</th> 
+										</tr> 
+										<tr> 
+											<td width="60%">王双信</td> 
+											<td class="text-center"> 董事</td>                          
+										</tr> 
+										<tr> 
+											<td width="60%">代起胜</td> 
+											<td class="text-center">董事长 </td>                       
+										</tr>
+										<tr> 
+											<td width="60%">山秀元</td> 
+											<td class="text-center">董事</td>         
+	         							</tr> 
+	           							<tr>
+							            	<td width="60%">车玉和</td> 
+							            	<td class="text-center">监事</td>                           
+							            </tr>
+							            <tr> 
+							            	<td width="60%">杨凯</td> 
+							            	<td class="text-center">总经理</td>					                						            
+							            </tr> 
+									</tbody>
+								</table>
+							</div>
+							<!--变更记录-->
+							<div class="Change-record" style="display: none;">
+								<table class="c_changeList"> 
+									<tbody>
+										<tr class="ma_cr_tr2">
+											<th colspan="4" id="ma_cr_th2" style="border:none;">&nbsp;</th>
+										</tr> 
+										<tr class="ma_cr_tr2">
+											<th colspan="4" id="ma_twoword" style="text-align:center;">负责人变更（法定代表人、负责人、首席代表、个体户经营者、投资人、合伙事务执行人等变更）</th>
+										</tr> 
+										<tr> 
+											<th id="ma_cr_th2">序号</th> 
+											<th id="ma_cr_th2">变更日期</th> 
+											<th id="ma_cr_th2">变更前</th> 
+											<th id="ma_cr_th2">变更后</th> 
+										</tr> 
+										<tr> 
+											<td width="" class="ma_twoword">1</td> 
+											<td width="15%">2014-03-21</td> 
+											<td width="40%"> <div> <em>代起胜</em><br> </div> </td> 									
+											<td width="40%"> <div> <em>吕明</em><br> </div> </td> 
+										</tr>
+										<tr> 
+											<td width="" class="ma_twoword">2</td> 
+											<td width="15%">2015-03-26</td> 
+											<td width="40%"> <div> <em>吕明</em><br> </div> </td> 
+											<td width="40%"> <div> <em>杨凯*</em><br> </div> </td> </tr> 
+											<tr class="ma_cr_tr2">
+												<th colspan="4" id="ma_cr_th2" style="border:none;">&nbsp;</th>
+										</tr> 
+										<tr class="ma_cr_tr2">
+												<th colspan="4" id="ma_twoword" style="text-align:center;">注册资本变更（注册资本、注册资金、成员出资总额等变更）</th>
+										</tr> 
+										<tr> 
+											<th id="ma_cr_th2">序号</th> 
+											<th id="ma_cr_th2">变更日期</th> 
+											<th id="ma_cr_th2">变更前</th> 
+											<th id="ma_cr_th2">变更后</th> </tr> 
+										<tr> 
+											<td width="" class="ma_twoword">1</td> 
+											<td width="15%">2014-05-12</td> 
+											<td width="40%"> <div> <em>5000</em><br> </div> </td> 
+											<td width="40%"> <div> <em>20000</em><br> </div> </td> 
+										</tr> 
+										<tr class="ma_cr_tr2">
+											<th colspan="4" id="ma_cr_th2" style="border:none;">&nbsp;</th>
+										</tr> 
+										<tr class="ma_cr_tr2">
+											<th colspan="4" id="ma_twoword" style="text-align:center;">投资人信息变更（包括投资人、出资额、出资方式、出资日期、投资人名称等）</th>
+										</tr> 
+										<tr> 
+											<th id="ma_cr_th2">序号</th> <th id="ma_cr_th2">变更日期</th> 
+											<th id="ma_cr_th2">变更前</th> <th id="ma_cr_th2">变更后</th> 
+										</tr> 
+										<tr> 
+											<td width="" class="ma_twoword">1</td> 
+											<td width="15%">2014-05-12</td> 
+											<td width="40%"> <div>'车玉和'<br> </div> </td> 
+		                                	<td width="40%"> <div>'车玉和'<br> </div> </td>                                                                               
+										</tr> 
+										<tr> 
+											<td width="" class="ma_twoword">2</td> 
+											<td width="15%">2014-05-12</td> 
+											<td width="40%"> <div>'代起胜'<br> </div> </td> 
+		                                	<td width="40%"> <div>'代起胜'<br> </div> </td>                                                                               
+										</tr> 
+		                                <tr> 
+		                                	<td width="" class="ma_twoword">3</td> 
+		                                	<td width="15%">2014-05-12</td> 
+		                                	<td width="40%"> <div> '袁凤友'<br> </div> </td>                                      
+		                                	<td width="40%"> <div>'袁凤友'<br> </div> </td> 		                                
+		                                </tr> 
+		                                <tr> 
+		                                	<td width="" class="ma_twoword">4</td>
+		                                	<td width="15%">2014-05-12</td> 
+		                                	<td width="40%"> <div> <em>'张景奎'</em><br> </div> </td> 
+		                                	<td width="40%"> <div> <em>删除股东</em><br> </div> </td> 
+		                                </tr> 
+		                                <tr> 
+		                                	<td width="" class="ma_twoword">5</td> <td width="15%">2014-05-12</td>
+		                                	<td width="40%"> <div> <em>新添股东</em><br> </div> </td> 
+		                                	<td width="40%"> <div> <em>'王双信'</em><br> </div> </td> 
+		                                </tr> 
+		                                <tr> 
+		                                	<td width="" class="ma_twoword">6</td> 
+		                                	<td width="15%">2014-05-12</td> 
+		                                	<td width="40%"> <div> <em>新添股东</em><br> </div> </td> 
+		                                	<td width="40%"> <div> <em>'姜连发'</em><br> </div> </td> 
+		                                </tr> 
+		                                <tr>
+		                                	<td width="" class="ma_twoword">7</td> 
+		                                	<td width="15%">2014-05-12</td> <td width="40%"> <div> <em>新添股东</em><br> </div> </td> 
+		                                	<td width="40%"> <div> <em>'山秀元'</em><br> </div> </td> 
+		                                </tr>
+		                                <tr> 
+		                                	<td width="" class="ma_twoword">8</td> 
+		                                	<td width="15%">2014-05-12</td> 
+		                                	<td width="40%"> <div> <em>新添股东</em><br> </div> </td> 
+		                                	<td width="40%"> <div> <em>'佟庆国'</em><br> </div> </td> 
+		                                </tr> 
+		                                <tr> 
+		                                	<td width="" class="ma_twoword">9</td> 
+		                                	<td width="15%">2014-05-12</td> 
+		                                	<td width="40%"> <div> <em>新添股东</em><br> </div> </td> 
+		                                	<td width="40%"> <div> <em>'刘永保'</em><br> </div> </td> 
+		                                </tr> 
+		                                <tr> 
+		                                	<td width="" class="ma_twoword">10</td> 
+		                                	<td width="15%">2014-05-12</td>
+		                                	<td width="40%"> <div> <em>新添股东</em><br> </div> </td> 
+		                                	<td width="40%"> <div> <em>'程文秀'</em><br> </div> </td> 
+		                                </tr> 
+		                                <tr> 
+		                                	<td width="" class="ma_twoword">11</td> 
+		                                	<td width="15%">2016-07-28</td> 
+		                                	<td width="40%"> <div> <em>'程文秀'</em><br> </div> </td> 
+		                                	<td width="40%"> <div> <em>删除股东</em><br> </div> </td> 
+		                                </tr> 
+		                                <tr> 
+		                                	<td width="" class="ma_twoword">12</td>
+		                                	<td width="15%">2016-07-28</td> <td width="40%"> <div> <em>新添股东</em><br> </div> </td> 
+		                                	<td width="40%"> <div> <em>'邱元军'</em><br> </div> </td> 
+		                                </tr>
+		                                <tr class="ma_cr_tr2">
+		                                	<th colspan="4" id="ma_cr_th2" style="border:none;">&nbsp;</th>
+		                                </tr>
+		                                <tr class="ma_cr_tr2">
+		                                	<th colspan="4" id="ma_twoword" style="text-align:center;">经营范围变更（含业务范围变更）</th>
+		                                </tr> 
+		                                <tr> 
+		                                	<th id="ma_cr_th2">序号</th> 
+		                                	<th id="ma_cr_th2">变更日期</th> 
+		                                	<th id="ma_cr_th2">变更前</th> 
+		                                	<th id="ma_cr_th2">变更后</th> 
+		                                </tr> 
+		                                <tr> 
+		                                	<td width="" class="ma_twoword">1</td> 
+		                                	<td width="15%">2016-04-27</td> 
+		                                	<td width="40%"> <div>F5160<br> </div> </td>                                     
+		                                	<td width="40%"> <div> F5160<br> </div> </td>
+		                               
+		                                </tr> 
+		                                <tr> 
+		                                	<td width="" class="ma_twoword">2</td> 
+		                                	<td width="15%">2016-04-27</td> 
+		                                	<td width="40%"> <div>
+		                                    矿产品(除专项)销售<br>
+		                                    矿业投资、矿业策划与咨询服务<br>
+		                                    矿山机械设备、建材、钢材销售<br>
+		                                    科技产业投资开发、非金融性项目投资开发<br>
+		                                    煤炭的开采及销售(限取得许可证的分支机构经营)。<br> </div> </td> 
+		                                    <td width="40%"> <div>
+		                                    矿产品(除专项)销售<br>
+		                                    矿业投资、矿业策划与咨询服务<br>
+		                                    矿山机械设备、建材、钢材销售<br>
+		                                    科技产业投资开发、非金融性项目投资开发<br>
+		                                    煤炭的开采及销售(限取得许可证的分支机构经营)<br> <em>瓦斯各项参数测定</em><br> <em>煤质各项指标化验</em>。<br> </div> </td>
+		                                </tr>
+									</tbody>
+								</table>
+							</div>
+							<!--下属煤矿-->
+							<div class="coal-mine">
+								
+							</div>
+							</div>							
+						</div>
+					</div>				
+				</div>				
+		</div>
+		<img src="img/bg-bottom-ranking-list.png"  class="bottom-img">
+		<!--<div class="page">-->
+						<!--<a id="btn0"></a>				
+						<input id="pageSize" type="text" size="1" maxlength="2" value="getDefaultValue()"/>
+						<a> 条 </a> -->
+						<!--<a href="javascript:;" id="pageSizeSet">设置</a> 
+						<a id="sjzl"></a> -->
+						<!--<a  href="javascript:;" id="btn1">首页</a>
+						<a  href="javascript:;" id="btn2">上一页</a>
+						<a  href="javascript:;" id="btn3">下一页</a>
+						<a  href="javascript:;" id="btn4">尾页</a> 
+						<a>转到</a>
+						<input id="changePage" type="text" size="1" maxlength="4"/>
+						<a>页</a>
+						<a  href="javascript:;" id="btn5">跳转</a>
+				</div>-->
+	</div>
+	</div>
+</div>
+				
+		<div id="top"></div>
+			<!--<script type="text/javascript" src="js/page.js"></script>	-->
+			<script>
+				$(function(){
+					var scroll_bar = $(".app-menu"),
+						b = scroll_bar.offset();
+						$(window).on("scroll",function(){
+							var c = $(document).scrollTop();
+							if(b.top<=c){
+								scroll_bar.css({'position':'fixed','top':'0px'})
+							}else{
+								scroll_bar.css({'position':'absolute','top':'0px'});
+								$('.appRank-container').css({'marginTop':'0px'});
+							}
+						});				
+					
+					//侧边导航
+					$('.menu-en>li').click(function(){
+						$(this).addClass('active').siblings().removeClass('active');
+						var index=$(this).index(); 
+ 						$(".weibo-ranking-contents > div").eq(index).show().siblings().hide();
+					});
+					//导航条
+					$(".clearfix>li").click(function(){
+						$(this).addClass('nav_choose').siblings().removeClass('nav_choose');s
+					})
+				});
+			</script>
+			<!--<script>
+				    $(function(){
+				        var scroll_bar = $("#mytable");
+				        var bar_head = $("#bar_head");
+				        var bar_height = bar_head.height();
+				        var sroll_header= scroll_bar.clone().attr('id','bb');
+				        $(window).scroll(function(){
+				            var scroll_top = $(document).scrollTop() - scroll_bar.offset().top;
+				   
+				            if (scroll_top > 0) {
+				                $('body').append('<div id="shelter"></div>');
+				                $("#shelter").css({'height':bar_height,'position':'fixed','color':'#8493e3','textAlign':'center','top':'0','overflow':'hidden','width':'1051px','margin': '0 auto','left':'154px','right':'0','borderTop':'2px solid #3a7bff','border-top-left-radius':'4px','border-top-right-radius':'4px'});
+				                sroll_header.appendTo('#shelter');
+				                $('#shelter table').removeClass();
+				                $('#shelter table').css({'width':'1051px','backgroundColor':'#394184','margin':'0 auto'});
+				                 $('#shelter table tr th:eq(0)').css({'width':'100px','paddingLeft':'43px','textAlign':'left','height':bar_height});
+				                $('#shelter table tr th:eq(2)').css({'width':'100px','paddingLeft':'28px','textAlign':'left','height':bar_height});
+				                $('#shelter table tr th').css({'width':'100px','zIndex':'9999','height':bar_height});
+				                $('#shelter table tr td').css({'padding':'20px','textAlign':'center'});
+				   
+				                $('#shelter').show();
+				   
+				            }else {
+				                $('#shelter').hide();
+				            }
+				        });
+				   
+				    });
+				 
+			</script>-->
+		<script>
+				$(function(){
+			//		回到顶部
+			$(window).scroll(function(){
+							var top = $(document).scrollTop();
+							if(top>500){
+								$('#top').fadeIn(800);
+							}else{
+								 $('#top').fadeOut(800);
+							}
+						});	
+						$("#top").click(function(){
+						$('html,body').animate({scrollTop:0},500);
+					})
+				});
+			</script>
+			<script type="text/javascript">
+				 var myChart = echarts.init(document.getElementById('main'));
+				 option = {
+    title: {
+        text: '投资人集资金占比',
+        subtext: '股权占比',
+        left: 'center',
+       	textStyle:{color:'#fff'},
+        subtextStyle:{color:'#fff'},
+
+
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        top:'top',
+        bottom: 10,
+        left: 'left',
+        textStyle:{color:'#fff'},
+        data: ['代起胜', '王双信','车玉和','佟庆国','山秀元','姜连发','袁凤友','刘永保','邱元军']
+    },
+    series : [
+        {
+            type: 'pie',
+            radius : '65%',
+            center: ['50%', '55%'],
+            selectedMode: 'single',
+            name:'自然人股东',
+            data:[
+                {
+                    value:7314,
+                    name: '代起胜',
+                    label: {
+                        normal: {
+                            formatter: [
+                                '{title|{b}}{abg|}',
+                                '  {weatherHead|认缴出资额(万元)}{valueHead|占比}{rateHead|股东类型}',
+                                '{hr|}',
+                                '  {Sunny|7314}{value|36.5700%}{rate|自然人股东}',
+                            ].join('\n'),
+                            backgroundColor: '#eee',
+                            borderColor: '#777',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                             rich: {
+                                title: {
+                                    color: '#eee',
+                                    align: 'center'
+                                },
+                                abg: {
+                                    backgroundColor: '#333',
+                                    width: '100%',
+                                    align: 'right',
+                                    height: 25,
+                                    borderRadius: [4, 4, 0, 0]
+                                },
+                                Sunny: {
+                                    height: 30,
+                                    align: 'center',
+                                    padding:[0,20,0,20]
+                                },
+                                weatherHead: {
+                                    color: '#333',
+                                    height: 24,
+                                    align: 'left'
+                                },
+                                hr: {
+                                    borderColor: '#777',
+                                    width: '100%',
+                                    borderWidth: 0.5,
+                                    height: 0
+                                },
+                                value: {
+                                    width: 50,
+                                    padding: [0, 0, 0, 30],
+                                    align: 'center'
+                                },
+                                valueHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    padding: [0, 20, 0, 10],
+                                    align: 'center'
+                                },
+                                rate: {
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 0, 0, 20]
+                                },
+                                rateHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 10, 0, 0]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    value:5584, 
+                    name: '王双信',
+                    label: {
+                        normal: {
+                            formatter: [
+                                '{title|{b}}{abg|}',
+                                '  {weatherHead|认缴出资额(万元)}{valueHead|占比}{rateHead|股东类型}',
+                                '{hr|}',
+                                '  {Sunny|5584}{value|27.9200%}{rate|自然人股东}',
+                            ].join('\n'),
+                            backgroundColor: '#eee',
+                            borderColor: '#777',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                            rich: {
+                                title: {
+                                    color: '#eee',
+                                    align: 'center'
+                                },
+                                abg: {
+                                    backgroundColor: '#333',
+                                    width: '100%',
+                                    align: 'right',
+                                    height: 25,
+                                    borderRadius: [4, 4, 0, 0]
+                                },
+                                Sunny: {
+                                    height: 30,
+                                    align: 'center',
+                                    padding:[0,20,0,20]
+                                },
+                                weatherHead: {
+                                    color: '#333',
+                                    height: 24,
+                                    align: 'left'
+                                },
+                                hr: {
+                                    borderColor: '#777',
+                                    width: '100%',
+                                    borderWidth: 0.5,
+                                    height: 0
+                                },
+                                value: {
+                                    width: 50,
+                                    padding: [0, 0, 0, 30],
+                                    align: 'center'
+                                },
+                                valueHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    padding: [0, 20, 0, 10],
+                                    align: 'center'
+                                },
+                                rate: {
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 0, 0, 20]
+                                },
+                                rateHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 10, 0, 0]
+                                }
+                            }
+                        }
+                    }
+                    
+                    
+                },
+                {
+                    value:1994, name: '车玉和',
+                    label: {
+                        normal: {
+                            formatter: [
+                                '{title|{b}}{abg|}',
+                                '  {weatherHead|认缴出资额(万元)}{valueHead|占比}{rateHead|股东类型}',
+                                '{hr|}',
+                                '  {Sunny|1994}{value|9.9700%}{rate|自然人股东}',
+                            ].join('\n'),
+                            backgroundColor: '#eee',
+                            borderColor: '#777',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                            rich: {
+                                title: {
+                                    color: '#eee',
+                                    align: 'center'
+                                },
+                                abg: {
+                                    backgroundColor: '#333',
+                                    width: '100%',
+                                    align: 'right',
+                                    height: 25,
+                                    borderRadius: [4, 4, 0, 0]
+                                },
+                                Sunny: {
+                                    height: 30,
+                                    align: 'center',
+                                    padding:[0,20,0,20]
+                                },
+                                weatherHead: {
+                                    color: '#333',
+                                    height: 24,
+                                    align: 'left'
+                                },
+                                hr: {
+                                    borderColor: '#777',
+                                    width: '100%',
+                                    borderWidth: 0.5,
+                                    height: 0
+                                },
+                                value: {
+                                    width: 50,
+                                    padding: [0, 0, 0, 30],
+                                    align: 'center'
+                                },
+                                valueHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    padding: [0, 20, 0, 10],
+                                    align: 'center'
+                                },
+                                rate: {
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 0, 0, 20]
+                                },
+                                rateHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 10, 0, 0]
+                                }
+                            }
+                        }
+                    }
+                    
+                },
+                {
+                    value:1440, name: '佟庆国',
+                    label: {
+                        normal: {
+                            formatter: [
+                                '{title|{b}}{abg|}',
+                                '  {weatherHead|认缴出资额(万元)}{valueHead|占比}{rateHead|股东类型}',
+                                '{hr|}',
+                                '  {Sunny|1440}{value|7.200%}{rate|自然人股东}',
+                            ].join('\n'),
+                            backgroundColor: '#eee',
+                            borderColor: '#777',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                            rich: {
+                                title: {
+                                    color: '#eee',
+                                    align: 'center'
+                                },
+                                abg: {
+                                    backgroundColor: '#333',
+                                    width: '100%',
+                                    align: 'right',
+                                    height: 25,
+                                    borderRadius: [4, 4, 0, 0]
+                                },
+                                Sunny: {
+                                    height: 30,
+                                    align: 'center',
+                                    padding:[0,20,0,20]
+                                },
+                                weatherHead: {
+                                    color: '#333',
+                                    height: 24,
+                                    align: 'left'
+                                },
+                                hr: {
+                                    borderColor: '#777',
+                                    width: '100%',
+                                    borderWidth: 0.5,
+                                    height: 0
+                                },
+                                value: {
+                                    width: 50,
+                                    padding: [0, 0, 0, 30],
+                                    align: 'center'
+                                },
+                                valueHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    padding: [0, 20, 0, 10],
+                                    align: 'center'
+                                },
+                                rate: {
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 0, 0, 20]
+                                },
+                                rateHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 10, 0, 0]
+                                }
+                            }
+                        }
+                    }
+                    
+                },
+                {
+                    value:1380, name: '山秀元',
+                    label: {
+                        normal: {
+                            position:['top','insideRight'],
+                            distance:5,
+                            formatter: [
+                                '{title|{b}}{abg|}',
+                                '  {weatherHead|认缴出资额(万元)}{valueHead|占比}{rateHead|股东类型}',
+                                '{hr|}',
+                                '  {Sunny|1380}{value|6.900%}{rate|自然人股东}',
+                            ].join('\n'),
+                            backgroundColor: '#eee',
+                            borderColor: '#777',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                            rich: {
+                                title: {
+                                    color: '#eee',
+                                    align: 'center'
+                                },
+                                abg: {
+                                    backgroundColor: '#333',
+                                    width: '100%',
+                                    align: 'right',
+                                    height: 25,
+                                    borderRadius: [4, 4, 0, 0]
+                                },
+                                Sunny: {
+                                    height: 30,
+                                    align: 'center',
+                                    padding:[0,20,0,20]
+                                },
+                                weatherHead: {
+                                    color: '#333',
+                                    height: 24,
+                                    align: 'left'
+                                },
+                                hr: {
+                                    borderColor: '#777',
+                                    width: '100%',
+                                    borderWidth: 0.5,
+                                    height: 0
+                                },
+                                value: {
+                                    width: 50,
+                                    padding: [0, 0, 0, 30],
+                                    align: 'center'
+                                },
+                                valueHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    padding: [0, 20, 0, 10],
+                                    align: 'center'
+                                },
+                                rate: {
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 0, 0, 20]
+                                },
+                                rateHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 10, 0, 0]
+                                }
+                            }
+                        }
+                    }
+                    
+                },
+                {
+                    value:1152, name: '姜连发',
+                    label: {
+                        normal: {
+                            formatter: [
+                                '{title|{b}}{abg|}',
+                                '  {weatherHead|认缴出资额(万元)}{valueHead|占比}{rateHead|股东类型}',
+                                '{hr|}',
+                                '  {Sunny|1152}{value|5.7600%}{rate|自然人股东}',
+                            ].join('\n'),
+                            backgroundColor: '#eee',
+                            borderColor: '#777',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                            rich: {
+                                title: {
+                                    color: '#eee',
+                                    align: 'center'
+                                },
+                                abg: {
+                                    backgroundColor: '#333',
+                                    width: '100%',
+                                    align: 'right',
+                                    height: 25,
+                                    borderRadius: [4, 4, 0, 0]
+                                },
+                                Sunny: {
+                                    height: 30,
+                                    align: 'center',
+                                    padding:[0,20,0,20]
+                                },
+                                weatherHead: {
+                                    color: '#333',
+                                    height: 24,
+                                    align: 'left'
+                                },
+                                hr: {
+                                    borderColor: '#777',
+                                    width: '100%',
+                                    borderWidth: 0.5,
+                                    height: 0
+                                },
+                                value: {
+                                    width: 50,
+                                    padding: [0, 0, 0, 30],
+                                    align: 'center'
+                                },
+                                valueHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    padding: [0, 20, 0, 10],
+                                    align: 'center'
+                                },
+                                rate: {
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 0, 0, 20]
+                                },
+                                rateHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 10, 0, 0]
+                                }
+                            }
+                        }
+                    }
+                    
+                },
+                {
+                    value:660, name: '袁凤友',
+                    label: {
+                        normal: {
+                            formatter: [
+                                '{title|{b}}{abg|}',
+                                '  {weatherHead|认缴出资额(万元)}{valueHead|占比}{rateHead|股东类型}',
+                                '{hr|}',
+                                '  {Sunny|660}{value|3.300%}{rate|自然人股东}',
+                            ].join('\n'),
+                            backgroundColor: '#eee',
+                            borderColor: '#777',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                            rich: {
+                                title: {
+                                    color: '#eee',
+                                    align: 'center'
+                                },
+                                abg: {
+                                    backgroundColor: '#333',
+                                    width: '100%',
+                                    align: 'right',
+                                    height: 25,
+                                    borderRadius: [4, 4, 0, 0]
+                                },
+                                Sunny: {
+                                    height: 30,
+                                    align: 'center',
+                                    padding:[0,20,0,20]
+                                },
+                                weatherHead: {
+                                    color: '#333',
+                                    height: 24,
+                                    align: 'left'
+                                },
+                                hr: {
+                                    borderColor: '#777',
+                                    width: '100%',
+                                    borderWidth: 0.5,
+                                    height: 0
+                                },
+                                value: {
+                                    width: 50,
+                                    padding: [0, 0, 0, 30],
+                                    align: 'center'
+                                },
+                                valueHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    padding: [0, 20, 0, 10],
+                                    align: 'center'
+                                },
+                                rate: {
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 0, 0, 20]
+                                },
+                                rateHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 10, 0, 0]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    value:276, name: '刘永保',
+                    label: {
+                        normal: {
+                            formatter: [
+                                '{title|{b}}{abg|}',
+                                '  {weatherHead|认缴出资额(万元)}{valueHead|占比}{rateHead|股东类型}',
+                                '{hr|}',
+                                '  {Sunny|276}{value|1.3800%}{rate|自然人股东}',
+                            ].join('\n'),
+                            backgroundColor: '#eee',
+                            borderColor: '#777',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                            rich: {
+                                title: {
+                                    color: '#eee',
+                                    align: 'center'
+                                },
+                                abg: {
+                                    backgroundColor: '#333',
+                                    width: '100%',
+                                    align: 'right',
+                                    height: 25,
+                                    borderRadius: [4, 4, 0, 0]
+                                },
+                                Sunny: {
+                                    height: 30,
+                                    align: 'center',
+                                    padding:[0,20,0,20]
+                                },
+                                weatherHead: {
+                                    color: '#333',
+                                    height: 24,
+                                    align: 'left'
+                                },
+                                hr: {
+                                    borderColor: '#777',
+                                    width: '100%',
+                                    borderWidth: 0.5,
+                                    height: 0
+                                },
+                                value: {
+                                    width: 50,
+                                    padding: [0, 0, 0, 30],
+                                    align: 'center'
+                                },
+                                valueHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    padding: [0, 20, 0, 10],
+                                    align: 'center'
+                                },
+                                rate: {
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 0, 0, 20]
+                                },
+                                rateHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 10, 0, 0]
+                                }
+                            }
+                        }
+                    }
+                    
+                },
+                {
+                    value:200,
+                    name: '邱元军',
+                    label: {
+                        normal: {
+                            formatter: [
+                                '{title|{b}}{abg|}',
+                                '  {weatherHead|认缴出资额(万元)}{valueHead|占比}{rateHead|股东类型}',
+                                '{hr|}',
+                                '  {Sunny|200}{value|1.00%}{rate|自然人股东}',
+                            ].join('\n'),
+                            backgroundColor: '#eee',
+                            borderColor: '#777',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                            rich: {
+                                title: {
+                                    color: '#eee',
+                                    align: 'center'
+                                },
+                                abg: {
+                                    backgroundColor: '#333',
+                                    width: '100%',
+                                    align: 'right',
+                                    height: 25,
+                                    borderRadius: [4, 4, 0, 0]
+                                },
+                                Sunny: {
+                                    height: 30,
+                                    align: 'center',
+                                    padding:[0,20,0,20]
+                                },
+                                weatherHead: {
+                                    color: '#333',
+                                    height: 24,
+                                    align: 'left'
+                                },
+                                hr: {
+                                    borderColor: '#777',
+                                    width: '100%',
+                                    borderWidth: 0.5,
+                                    height: 0
+                                },
+                                value: {
+                                    width: 50,
+                                    padding: [0, 0, 0, 30],
+                                    align: 'center'
+                                },
+                                valueHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    padding: [0, 20, 0, 10],
+                                    align: 'center'
+                                },
+                                rate: {
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 0, 0, 20]
+                                },
+                                rateHead: {
+                                    color: '#333',
+                                    width: 50,
+                                    align: 'center',
+                                    padding: [0, 10, 0, 0]
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};				 
+				 myChart.setOption(option);
+			</script>
+	</body>
+</html>
+
